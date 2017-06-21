@@ -51,5 +51,20 @@ public class Profile {
      * Just making the default constructor private.
      */
     private Profile() {}
+    
+    /**
+     *  Update the profile with given displayName and teeShirtSize
+     *  
+     *  @param displayName
+     *  @param teeShirtSize
+     */
+    public void update(String displayName, TeeShirtSize teeShirtSize) {
+    	if (displayName != null) {
+    		this.displayName = displayName;
+    	}
+    	if (teeShirtSize != null) {
+    		this.teeShirtSize = teeShirtSize;
+    	}
+     }
 
 }
