@@ -120,9 +120,9 @@ public class ConferenceApi {
 
 		// TODO
 		// load the Profile Entity
-		String userId = ""; // TODO
-		Key key = null; // TODO
-		Profile profile = null; // TODO load the Profile entity
+		String userId = user.getUserId(); // TODO
+		Key key = Key.create(Profile.class, userId); // TODO
+		Profile profile = (Profile)ofy().load().key(key).now(); // TODO load the Profile entity
 		return profile;
 	}
 }
